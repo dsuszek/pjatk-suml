@@ -5,7 +5,6 @@ from transformers import pipeline
 
 # Wyświetlenie informacji o prawidłowym uruchomieniu aplikacji
 st.success('Aplikacja została prawidłowo uruchomiona')
-st.image('sunrise.jpg')
 
 # Ładowanie aplikacji
 st.spinner()
