@@ -34,6 +34,10 @@ if option == 'Tłumacz z języka angielskiego na język niemiecki':
             translator = pipeline('translation_en_to_de', model='Helsinki-NLP/opus-mt-en-de')
             translated_text = translator(text_to_translate, max_length=40)[0]['translation_text']
 
+            st.spinner()
+            with st.spinner(text='Tłumaczenie tekstu...'):
+                time.sleep(2)
+
             # Pokazanie przetłumaczonego tekstu
             st.success(f'{translated_text}')
         except Exception as e:
@@ -46,6 +50,10 @@ elif option == 'Wydźwięk emocjonalny tekstu (eng)':
         try:
             classifier = pipeline("sentiment-analysis")
             answer = classifier(text)
+            st.spinner()
+            with st.spinner(text='Analizowanie tekstu...'):
+                time.sleep(2)
+
             st.write(answer)
         except Exception as e:
             st.error('Podczas analizowania tekstu wystąpił błąd. Proszę spróbować jeszcze raz.')
