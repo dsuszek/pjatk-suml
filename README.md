@@ -1,4 +1,4 @@
-## LAB004 - Streamlit Translator app
+## LAB005 - Titanic prediction model
 
 In order to start the application, activate the virtual environment in your console by:
 
