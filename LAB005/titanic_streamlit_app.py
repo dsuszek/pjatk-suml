@@ -23,7 +23,6 @@ def main():
     with st.spinner(text='Ładowanie...'):
         time.sleep(2)
 
-
     overview = st.container()
     left, right = st.columns(2)
     prediction = st.container()
@@ -45,7 +44,7 @@ def main():
         parch_slider = st.slider('# Liczba rodziców i/lub dzieci', min_value=0, max_value=6)
         fare_slider = st.slider('Cena biletu', min_value=0, max_value=500, step=10)
 
-    # Define the feature names in the same order as they were during training
+    # Nazwy zmiennych w tej samej kolejności, w jakiej były użyte podczas trenowania modelu
     feature_names = ['Pclass', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked', 'male']
 
     data = pd.DataFrame(
