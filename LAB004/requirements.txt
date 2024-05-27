@@ -1,5 +1,0 @@
-streamlit
-transformers
-torch
-sentencepiece
-huggingface_hub==0.20.0
