@@ -1,0 +1,6 @@
+streamlit
+time
+numpy
+scipy
+scikit-learn
+transformers
