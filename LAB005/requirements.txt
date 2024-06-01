@@ -3,4 +3,4 @@ numpy
 scipy
 scikit-learn
 transformers
-pickle
+joblib

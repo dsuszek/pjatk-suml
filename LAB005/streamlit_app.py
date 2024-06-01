@@ -1,11 +1,10 @@
 import pandas as pd
 import streamlit as st
-import pickle
+import joblib
 import time
 
 # Ścieżka do wcześniej wytrenowanego modelu
-filename = 'model.pkl'
-model = pickle.load(open(filename, 'rb'))
+model = joblib.load('model_lreg.joblib')
 
 sex_d = {0: 'Kobieta', 1: 'Mężczyzna'}
 pclass_d = {0: 'Pierwsza', 1: 'Druga', 2: 'Trzecia'}
