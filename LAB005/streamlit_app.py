@@ -4,7 +4,7 @@ import joblib
 import time
 
 # Ścieżka do wcześniej wytrenowanego modelu
-model = joblib.load('LAB005/model_lreg.joblib')
+model = joblib.load('model_lreg.joblib')
 
 sex_d = {0: 'Kobieta', 1: 'Mężczyzna'}
 pclass_d = {0: 'Pierwsza', 1: 'Druga', 2: 'Trzecia'}
@@ -47,7 +47,7 @@ def main():
     feature_names = ['Pclass', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked', 'male']
 
     data = pd.DataFrame(
-        [[pclass_radio, sex_radio, age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio]],
+        [[pclass_radio, age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio, sex_radio]],
         columns=feature_names)
 
     survival = model.predict(data)
