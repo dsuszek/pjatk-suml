@@ -4,7 +4,7 @@ import joblib
 import time
 
 # Ścieżka do wcześniej wytrenowanego modelu
-model = joblib.load('model_lreg.joblib')
+model = joblib.load('LAB005/model_lreg.joblib')
 
 sex_d = {0: 'Kobieta', 1: 'Mężczyzna'}
 pclass_d = {0: 'Pierwsza', 1: 'Druga', 2: 'Trzecia'}
