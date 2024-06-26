@@ -22,12 +22,12 @@ def predict_value(x):
 
 def update_model(x, y):
     # Załaduj istniejące dane z pliku
-    data = pd.read_csv('data.csv')
+    data = pd.read_csv('LAB006/Lab06/data.csv')
 
     # Dodaj nowe dane na końcu pliku
     new_data = pd.DataFrame({'x': [x], 'y': y})
     data = pd.concat([data, new_data], ignore_index=True)
-    data.to_csv('data.csv', index=False)
+    data.to_csv('LAB006/Lab06/data.csv', index=False)
 
     # Przygotuj dane do trenowania modelu
     X = data[['x']]
@@ -37,14 +37,14 @@ def update_model(x, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     # Wczytaj istniejący model
-    with open('our_model.pkl', 'rb') as file:
+    with open('LAB006/Lab06/our_model.pkl', 'rb') as file:
         model = pickle.load(file)
 
     # Wytrenuj model na zaktualizowanych danych
     model.fit(X_train, y_train)
 
     # Zapisz nowy model do pliku pickle
-    with open('our_model.pkl', 'wb') as file:
+    with open('LAB006/Lab06/our_model.pkl', 'wb') as file:
         pickle.dump(model, file)
 
 
