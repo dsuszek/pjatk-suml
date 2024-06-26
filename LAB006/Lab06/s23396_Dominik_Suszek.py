@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 
 def predict_value(x):
     # Załaduj model z pliku pickle
-    with open('our_model.pkl', 'rb') as file:
+    with open('LAB006/Lab06/our_model.pkl', 'rb') as file:
         model = pickle.load(file)
 
     # Przewiduj wartość y na podstawie dostarczonego x
